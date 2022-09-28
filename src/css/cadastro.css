@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400&display=swap');
+
+/* geral */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+    color: white;
+    background: #140D4F;
+    
+}
+
+h1 {
+    color: #82DDF0;
+    font-size: 1.6rem; /* Adaptada ao elemento root. Ou seja, 1.6 vezes a mais*/
+    font-weight: 50;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+  input, label {
+    display: block;
+    width: 100%;
+    
+  }
+
+  input {
+    background: #5296A5;
+    color: #372C2C;
+    padding: 7px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+  }
+
+  input::placeholder {
+    color: #372C2C;
+    font-weight: 5;
+  }
+
+  input:focus, label:focus {
+    outline: none ; 
+    border-color: #82DDF0 ;
+  }
+
+ 
+
+  select {
+    background: #5296A5;
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+    margin-top: 10px;
+    
+  }
+
+   #btn-submit {
+    width: 200px;
+    height: 80px;
+    border: 1 solid bold;
+    color: #1C0B19;
+    margin-top: 30px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;  
+   }
+
+  body {
+    background: #140D4F;
+    padding-top: 5vh;  /* --> 5% da tela */
+  }
+
+ 
+
+  /* form */
+
+  #main-container {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;    
+  }
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.full-box {
+    flex: 1 1 100%;
+    position: relative;
+  }
+
+  .half-box {
+    flex: 1 1 45%;    
+  }
+
+  .spacing {
+    margin-right: 2.5%;
+  }
+
+  #number {
+    width: 120px;
+  }
+
+/* validações */
+
+.error-validation {
+    color: #FF1A1A;
+    position: absolute;
+    top: 57px;
+    font-size: .8rem;
+}
+ 
+
+.template {
+    display: none;
+}  
+
+
+.card-group {
+    display: flex;
+    border: 1px solid #5296A5;  
+    margin-top: 30px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 35px;
+
+}
+
+.card img{
+    border-radius: 5px;
+    margin-left: 1px 3px 1px 3px;
+}
+
