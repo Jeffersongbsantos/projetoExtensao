@@ -115,12 +115,9 @@ form {
 }
  
 
-.template {
-    display: none;
-}  
 
 
-.card-group {
+ /* .card-group {
     display: flex;
     border: 1px solid #5296A5;  
     margin-top: 30px;
@@ -135,4 +132,80 @@ form {
     border-radius: 5px;
     margin-left: 1px 3px 1px 3px;
 }
+ */
 
+ .container {
+    display: flex;
+    border: 1px solid #5296A5;  
+    margin-top: 30px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+ 
+    padding: 35px;
+}
+
+   .itens {
+    margin-top: 30px;
+   }
+
+.container .list {
+  margin-top:40px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap; 
+  
+}
+
+
+.form-element input {
+  display:none;
+}
+
+
+.form-element label {
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  height:100%;
+  cursor:pointer;  
+  box-shadow:0px 5px 20px 2px rgba(0,0,0,0.1);
+  text-align:center;
+  transition:all 200ms ease-in-out;
+  border-radius:5px;
+  margin: 5px;
+  
+}
+
+.form-element img {
+  border-radius: 10px;
+  
+}
+
+
+.form-element input:checked + label:before {
+  opacity:1;
+  transform:scale(1);
+}
+
+
+
+.form-element input:checked + label {  
+  background: #5296A5;
+  
+}
+
+
+@media only screen  and (min-width: 100px) and (max-width: 500px) {
+ 
+  #main-container {
+    width: 80%;
+  }
+
+  .full-box input {
+    height: 40%;
+    
+  } 
+
+  
+}
