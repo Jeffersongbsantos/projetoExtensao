@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/src/css/cadastro.css"/>    
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
-
+    <script src="cadastro.js"></script>
     
   </head>
   <body>
@@ -17,24 +17,28 @@
       
       <form action="" method="" id="register-form">
         <div class="full-box ">
-          <label for="name">Nome do estabelecimento *</label>
-          <input type="text name="name" id="name" placeholder="Ex: Saude Farma" required maxlength="150"/>
+          <label for="name" >Nome do estabelecimento *</label>
+          <input type="text name="name" id="name" placeholder="Ex: Saude Farma" required maxlength="150" oninput="nameValidate()"/>
+          <span class="label-required">É obrigatorio o preenchimento</span>
           
         </div>
         <div class="half-box spacing">
           <label for="endereço">Endereço *</label>
           <input type="text" name="endereço" id="endereço" placeholder="Ex: Av dois rios" required/>
+          <span class="label-required">É obrigatorio o preenchimento</span>
+
         
         </div>
         <div class="half-box spacing">
           <label for="numero">Número </label>
-          <input type="text" name="numero" id="numero" placeholder="Ex: 3702" maxlength="4" />
+          <input type="text"  maxlength="4"  name="numero" id="numero" placeholder="Ex: 3702"  onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
         </div>
         
         <div class="full-box">
-          <label for="bairro">Bairro *</label>
+          <label for="bairro" >Bairro *</label>
           <input type="text" name="bairro"  id="bairro" placeholder="Ex: Encruzilhada" required/>
-         
+          <span class="label-required">É obrigatorio o preenchimento</span>
+
         </div>
         <div class="full-box">
           <label for="telefone">Telefone do estabelecimento </label>
@@ -53,48 +57,83 @@
               <option value="Escola">Escola</option>
               <option value="Universidade">Universidade</option>
             </select>
-          </div>
-        </div>
-
-        
-            <div class="card-group">
-                <div class="card">
-                  <img src="/src/img/xxx.png" class="card-img-top" alt="...">
-                 
-                </div>
-              
-                <div class="card">
-                    <img src="/src/img/xxx.png" class="card-img-top" alt="...">
-                  
-                </div>
-              
-                <div class="card">
-                    <img src="/src/img/xxx.png" class="card-img-top" alt="...">                
-              </div>
-                <div class="card">
-                    <img src="/src/img/xxx.png" class="card-img-top" alt="...">                
-              </div>
-                <div class="card">
-                    <img src="/src/img/xxx.png" class="card-img-top" alt="...">                
-              </div>
-                <div class="card">
-                    <img src="/src/img/xxx.png" class="card-img-top" alt="...">                
-              </div>
-              
-                <div class="card">
-                    <img src="/src/img/xxx.png" class="card-img-top" alt="...">                
-              </div>
-              
-                <div class="card">
-                    <img src="/src/img/xxx.png" class="card-img-top" alt="...">                
-              </div>
-              
-                <div class="card">
-                    <img src="/src/img/xxx.png" class="card-img-top" alt="...">                
-              </div>
-              
             
           </div>
+          <p class="itens">Itens de acessibilidade:</p>
+        </div>
+
+
+          
+          <div class="container">
+            
+            <div class="list">
+              <div class="form-element">
+                <input type="checkbox" name="platform" value="acessibilidade1" id="acessibilidade1">
+                <label for="acessibilidade1">
+                  <div class="icon">
+                    <img src="/src/img/xxx.png">
+                  </div>
+                 
+                </label>
+              </div>
+              <div class="form-element">
+                <input type="checkbox" name="platform" value="acessibilidade2" id="acessibilidade2">
+                <label for="acessibilidade2">
+                  <div class="icon">
+                    <img src="/src/img/xxx.png" alt="">
+                  </div>
+                
+                </label>
+              </div>
+              <div class="form-element">
+                <input type="checkbox" name="platform" value="acessibilidade3" id="acessibilidade3">
+                <label for="acessibilidade3">
+                  <div class="icon">
+                    <img src="/src/img/xxx.png" alt="">
+                  </div>
+                 
+                </label>
+              </div>
+              <div class="form-element">
+                <input type="checkbox" name="platform" value="acessibilidade4" id="acessibilidade4">
+                <label for="acessibilidade4">
+                  <div class="icon">
+                    <img src="/src/img/xxx.png" alt="">
+                  </div>
+                 
+                </label>
+              </div>
+              <div class="form-element">
+                <input type="checkbox" name="platform" value="acessibilidade5" id="acessibilidade5">
+                <label for="acessibilidade5">
+                  <div class="icon">
+                    <img src="/src/img/xxx.png" alt="">
+                  </div>
+                 
+                </label>
+              </div>
+              <div class="form-element">
+                <input type="checkbox" name="platform" value="acessibilidade6" id="acessibilidade6" >
+                <label for="acessibilidade6">
+                  <div class="icon">
+                    <img src="/src/img/xxx.png" alt="">
+                  </div>
+                  
+                </label>
+              </div>
+              <div class="form-element">
+                <input type="checkbox" name="platform" value="acessibilidade7" id="acessibilidade7">
+                <label for="acessibilidade7">
+                  <div class="icon">
+                    <img src="/src/img/xxx.png" alt="">
+                  </div>
+                 
+                </label>
+              </div>      
+             
+            </div>
+          </div>
+  
   
         
         <div class="full-box">
@@ -105,11 +144,7 @@
       </form>
     </div>   
     
-    <script>
-        $("#telefone").mask("(99) 99999-9999");
         
-    </script>
-
 
   </body>
 </html>
