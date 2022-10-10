@@ -30,18 +30,3 @@ if(char.match(pattern)) {
 
 /* Validação */
 
-const form = document.getElementById("register-form");
-const campos = document.querySelectorAll('.required');
-const label = document.querySelectorAll('label-required');
-
-function setError(index){
-    campos[index].style.border = '2px solid #e63636';
-}
-
- 
-function nameValidate() {
-   if(campos[0].ariaValueMax.length < 3)
-          setError(0);
-} else {
-    console.log('Validado o nome');
-}

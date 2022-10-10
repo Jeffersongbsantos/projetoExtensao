@@ -46,9 +46,18 @@ h1 {
     font-weight: 5;
   }
 
-  input:focus, label:focus {
-    outline: none ; 
-    border-color: #82DDF0 ;
+  input:invalid {
+    border-color: rgb(231, 104, 104);
+  }
+
+  input:valid {
+    border-color: #5296A5 !important;
+    
+  }
+
+  input:focus {
+    outline: none;
+    border-color: #5296A5 !important ;
   }
 
  
